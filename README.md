@@ -183,6 +183,39 @@ df.info()
 
 ```python
 #Your code here
+def normalize_col(series):
+    mu = series.mean()
+    std = series.std()
+    series = series.map(lambda x: (x-mu)/std)
+    return series
+for col in df.columns:
+    if df[col].dtype in [np.float64]:
+        df[col] = normalize_col(df[col])
+        print('Transformed {} to standard normal variable.')
+        print('Now mu: {} std: {}'.format(df[col].mean(), df[col].std()))
+    else:
+        continue
+```
+
+    Transformed {} to standard normal variable.
+    Now mu: 2.112873669081103e-16 std: 0.999999999999999
+    Transformed {} to standard normal variable.
+    Now mu: -2.4377225691997434e-16 std: 1.0000000000000222
+    Transformed {} to standard normal variable.
+    Now mu: -3.306401903938308e-17 std: 1.0000000000000073
+    Transformed {} to standard normal variable.
+    Now mu: 3.89770812527246e-14 std: 1.0000000000000264
+    Transformed {} to standard normal variable.
+    Now mu: -2.5472605384133787e-17 std: 0.9999999999999981
+    Transformed {} to standard normal variable.
+    Now mu: 2.153038682506626e-14 std: 0.9999999999999868
+    Transformed {} to standard normal variable.
+    Now mu: -4.4576886505471716e-14 std: 0.9999999999999545
+
+
+
+```python
+#With Lambda
 for col in df.columns:
     if df[col].dtype in [np.float64]:
         mu = df[col].mean()
@@ -353,7 +386,7 @@ df.ages2.value_counts().plot(ax=ax2, kind='barh')
 
 
 
-![png](index_files/index_15_1.png)
+![png](index_files/index_16_1.png)
 
 
 
@@ -376,7 +409,7 @@ temp['count'].plot(kind='barh')
 
 
 
-![png](index_files/index_16_1.png)
+![png](index_files/index_17_1.png)
 
 
 
@@ -408,7 +441,7 @@ temp['count'].plot(ax=ax2, kind='barh')
 
 
 
-![png](index_files/index_17_1.png)
+![png](index_files/index_18_1.png)
 
 
 # Level Up:
