@@ -1,4 +1,16 @@
 
+# Statistical Methods in Pandas - Lab
+
+## Introduction
+
+In this lesson you'll get some hands on experience using some of the key summary statistics methods in Pandas.
+
+## Objectives:
+You will be able to:
+* Understand and use the df.describe() and df.info() summary statistics methods
+* Use built-in Pandas methods for calculating summary statistics (pd.mean, pd.std, count(), sum(), mean(), median(), std(), var() and quantile())
+* Apply a function to every element in a Series or DataFrame using s.apply() and df.applymap()
+
 
 ```python
 import pandas as pd
@@ -173,3 +185,7 @@ Create a bar graph depicting the number of lego sets for the original age range 
 ```python
 #Your code here
 ```
+
+## Summary
+
+In this lesson we got some hands on experience working with summary statistics methods in Pandas. In the next lesson, we're going to take some time to look at how to customize our plots in Matplotlib.
