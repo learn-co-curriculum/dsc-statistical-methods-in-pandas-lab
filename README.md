@@ -7,185 +7,122 @@ In this lesson you'll get some hands on experience using some of the key summary
 
 ## Objectives:
 You will be able to:
+
 * Understand and use the df.describe() and df.info() summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (pd.mean, pd.std, count(), sum(), mean(), median(), std(), var() and quantile())
+* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .mean(), .median(), .std(), .var() and .quantile())
 * Apply a function to every element in a Series or DataFrame using s.apply() and df.applymap()
 
 
-```python
-import pandas as pd
-```
+## Getting Started
+
+For this lab, we'll be working with a dataset containing information on various lego datasets.  You will find this dataset in the file `lego_sets.csv`.  
+
+In the cell below:
+
+* Import pandas and set the standard alias of `pd`
+* Load in the `lego_sets.csv`dataset using the `read_csv()` function
+* Display the head of the DataFrame to get a feel for what we'll be working with
 
 
 ```python
-df = pd.read_csv('lego_sets.csv')
-df.head()
+df = None
 ```
 
+## Getting DataFrame-Level Statistics
+
+We'll begin by getting some overall summary statistics on the dataset.  There are two ways we'll get this information-- `.info()` and `.describe()`.
+
+### Using `.info()`
+
+The `.info()` method provides us metadata on the DataFrame itself.  This allows to answer questions such as:
+
+* What data type does each column contain?
+* How many rows are in my dataset? 
+* How many total non-missing values does each column contain?
+* How much memory does the DataFrame take up?
+
+In the cell below, call our DataFrame's `.info()` method. 
+
+#### Interpreting the Results
+
+Read the output above, and then answer the following questions:
+
+How many total rows are in this DataFrame?  How many columns contain numeric data? How many contain categorical data?  Identify at least 3 columns that contain missing values. 
+
+Write your answer below this line:
+________________________________________________________________________________________________________________________________
+
+There are 12261 rows, as evidenced by the Range Index listed in the output.  Of the 14 columns in this dataset, 7 contain numeric data stored as `float64`, and the other 7 contain strings, which pandas lists as `object`.  The column `num_reviews`, `review_difficulty`, and `val_star_rating` all contain missing values.  We can tell this because the number of entries for each of those columns is less than the total number of entries described by the Range Index. 
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+## Using `.describe()`
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+Whereas `.info()` provides statistics about the DataFrame itself, `.describe()` returns output containing basic summary statistics about the data contained with the DataFrame.  
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>ages</th>
-      <th>list_price</th>
-      <th>num_reviews</th>
-      <th>piece_count</th>
-      <th>play_star_rating</th>
-      <th>prod_desc</th>
-      <th>prod_id</th>
-      <th>prod_long_desc</th>
-      <th>review_difficulty</th>
-      <th>set_name</th>
-      <th>star_rating</th>
-      <th>theme_name</th>
-      <th>val_star_rating</th>
-      <th>country</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>6-12</td>
-      <td>29.99</td>
-      <td>2.0</td>
-      <td>277.0</td>
-      <td>4.0</td>
-      <td>Catapult into action and take back the eggs fr...</td>
-      <td>75823.0</td>
-      <td>Use the staircase catapult to launch Red into ...</td>
-      <td>Average</td>
-      <td>Bird Island Egg Heist</td>
-      <td>4.5</td>
-      <td>Angry Birds™</td>
-      <td>4.0</td>
-      <td>US</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>6-12</td>
-      <td>19.99</td>
-      <td>2.0</td>
-      <td>168.0</td>
-      <td>4.0</td>
-      <td>Launch a flying attack and rescue the eggs fro...</td>
-      <td>75822.0</td>
-      <td>Pilot Pig has taken off from Bird Island with ...</td>
-      <td>Easy</td>
-      <td>Piggy Plane Attack</td>
-      <td>5.0</td>
-      <td>Angry Birds™</td>
-      <td>4.0</td>
-      <td>US</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>6-12</td>
-      <td>12.99</td>
-      <td>11.0</td>
-      <td>74.0</td>
-      <td>4.3</td>
-      <td>Chase the piggy with lightning-fast Chuck and ...</td>
-      <td>75821.0</td>
-      <td>Pitch speedy bird Chuck against the Piggy Car....</td>
-      <td>Easy</td>
-      <td>Piggy Car Escape</td>
-      <td>4.3</td>
-      <td>Angry Birds™</td>
-      <td>4.1</td>
-      <td>US</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>12+</td>
-      <td>99.99</td>
-      <td>23.0</td>
-      <td>1032.0</td>
-      <td>3.6</td>
-      <td>Explore the architecture of the United States ...</td>
-      <td>21030.0</td>
-      <td>Discover the architectural secrets of the icon...</td>
-      <td>Average</td>
-      <td>United States Capitol Building</td>
-      <td>4.6</td>
-      <td>Architecture</td>
-      <td>4.3</td>
-      <td>US</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>12+</td>
-      <td>79.99</td>
-      <td>14.0</td>
-      <td>744.0</td>
-      <td>3.2</td>
-      <td>Recreate the Solomon R. Guggenheim Museum® wit...</td>
-      <td>21035.0</td>
-      <td>Discover the architectural secrets of Frank Ll...</td>
-      <td>Challenging</td>
-      <td>Solomon R. Guggenheim Museum®</td>
-      <td>4.6</td>
-      <td>Architecture</td>
-      <td>4.1</td>
-      <td>US</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+In the cell below, call the DataFrame's `.describe()` method. 
+
+#### Interpreting the Results
+
+The output contains descriptive statistics corresponding to the columns.  Use these to answer the following questions:
+
+How much is the standard deviation for piece count?  How many pieces are in the largest lego set?  How many in the smallest lego set? What is the median `val_star_rating`?
+
+________________________________________________________________________________________________________________________________
+
+The standard deviation is 825 pieces.  The largest lego set contains 7,541 pieces, while the smallest contains only 1.  The median value for `val_star_rating` is 4.3.
+
+## Getting Summary Statistics
+
+Pandas also allows us to easily compute individual summary statistics using built-in methods.  Next, we'll get some practice using these methods. 
+
+In the cell below, compute the median value of the `star_rating` column.
+
+Next, get a count of the total number of values in `play_star_rating`.
+
+Now, compute the standard deviation of the `list_price` column.
+
+If we bought every single lego set in this dataset, how many pieces would we have?  Use the `.sum()` method on the correct column to compute this. 
+
+Now, let's try getting the value for the 90% quantile.  Do this in the cell below.
+
+## Getting Summary Statistics on Categorical Data
+
+For obvious reasons, most of the methods we've used so far only work with numerical data--there's no way to calculate the standard deviation of a column containing string values. However, there are some things that we can discover about columns containing categorical data. 
+
+In the cell below, get the `.unique()` values contained within the `review_difficulty` column. 
+
+Now, let's get the `value_counts` for this column, to see how common each is. 
+
+As you can see, these provide us quick and easy ways to get information on columns containing categorical information.  
 
 
+## Using `.applymap()`
 
-# Standard Normal Variables
+When working with pandas DataFrames, we can quickly compute functions on the data contained by using the `applymap()` function and passing in a lambda function. 
 
-A standard practice when normalizing data in preprocessing for analysis is to often rescale variable to be standard normal variables. Standard normal variables have a mean of zero and a standard deviation of 1. You can transform any variable X into a standard normal variable Z as follows:
+For instance, we can use `applymap()` to return a version of the DataFrame where every value has been converted to a string.
 
-$Z = \frac{x-\mu}{\sigma}$
+In the cell below:
 
-Where $\mu$ is the mean of X and $\sigma$ is the standard deviation of x.
-
-Normalize all of the numeric columns in the dataframe using this transformation.
+* Call our DataFrame's `.applymap()` function and pass in `lambda x: str(x)`
+* Call our new `string_df` object's `.info()` method to confirm that everything has been cast to a string
 
 
 ```python
-#Your code here
+string_df = None
 ```
 
-# Data Transformation
+Note that everything--even the `NaN` values, have been cast to a string in the example above. 
 
-Create a dictionary that rebins the age column to the following age ranges:
-Under 5, 5-8, 8-12, 12+
+Note that for pandas Series objects (such as a single column in a DataFrame), we can do the same thing using the `apply()` method.  
 
-*If there is a conflict in age bin, default to the higher age bin.
+This is just one example of how we can quickly compute custom functions on our DataFrame--this will become especially useful when we learn how to **_normalize_** our datasets in a later section!
 
+# Conclusion
 
-```python
-#Your code here
-```
+In this lab, we learned how to:
 
-# Data Visualization
-Create a bar graph depicting the number of lego sets for the original age range column. Then create a second bar graph for the new age column you created. How do they compare?
-
-
-```python
-#Your code here
-```
-
-## Summary
-
-In this lesson we got some hands on experience working with summary statistics methods in Pandas. In the next lesson, we're going to take some time to look at how to customize our plots in Matplotlib.
+* Understand and use the df.describe() and df.info() summary statistics methods
+* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .mean(), .median(), .std(), .var() and .quantile())
+* Apply a function to every element in a Series or DataFrame using s.apply() and df.applymap()
