@@ -52,9 +52,9 @@ How many total rows are in this DataFrame?  How many columns contain numeric dat
 Write your answer below this line:
 ________________________________________________________________________________________________________________________________
 
-There are 12261 rows, as evidenced by the Range Index listed in the output.  Of the 14 columns in this dataset, 7 contain numeric data stored as `float64`, and the other 7 contain strings, which pandas lists as `object`.  The column `num_reviews`, `review_difficulty`, and `val_star_rating` all contain missing values.  We can tell this because the number of entries for each of those columns is less than the total number of entries described by the Range Index. 
 
 
+Answer question here...
 
 ## Using `.describe()`
 
@@ -70,7 +70,7 @@ How much is the standard deviation for piece count?  How many pieces are in the 
 
 ________________________________________________________________________________________________________________________________
 
-The standard deviation is 825 pieces.  The largest lego set contains 7,541 pieces, while the smallest contains only 1.  The median value for `val_star_rating` is 4.3.
+Answer questions here...
 
 ## Getting Summary Statistics
 
