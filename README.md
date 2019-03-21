@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lesson you'll get some hands on experience using some of the key summary statistics methods in Pandas.
+In this lesson you'll get some hands-on experience using some of the key summary statistics methods in Pandas.
 
 ## Objectives:
 You will be able to:
@@ -20,7 +20,7 @@ For this lab, we'll be working with a dataset containing information on various 
 In the cell below:
 
 * Import pandas and set the standard alias of `pd`
-* Load in the `lego_sets.csv`dataset using the `read_csv()` function
+* Load in the `lego_sets.csv` dataset using the `read_csv()` function
 * Display the head of the DataFrame to get a feel for what we'll be working with
 
 
@@ -113,13 +113,13 @@ In the cell below:
 string_df = None
 ```
 
-Note that everything--even the `NaN` values, have been cast to a string in the example above. 
+Note that everything--even the `NaN` values, has been cast to a string in the example above. 
 
 Note that for pandas Series objects (such as a single column in a DataFrame), we can do the same thing using the `apply()` method.  
 
 This is just one example of how we can quickly compute custom functions on our DataFrame--this will become especially useful when we learn how to **_normalize_** our datasets in a later section!
 
-# Conclusion
+## Summary
 
 In this lab, we learned how to:
 
