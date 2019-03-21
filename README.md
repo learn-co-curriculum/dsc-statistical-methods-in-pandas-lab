@@ -5,7 +5,7 @@
 
 In this lesson you'll get some hands-on experience using some of the key summary statistics methods in Pandas.
 
-## Objectives:
+## Objectives
 You will be able to:
 
 * Understand and use the df.describe() and df.info() summary statistics methods
