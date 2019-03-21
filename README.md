@@ -3,9 +3,9 @@
 
 ## Introduction
 
-In this lesson you'll get some hands on experience using some of the key summary statistics methods in Pandas.
+In this lesson you'll get some hands-on experience using some of the key summary statistics methods in Pandas.
 
-## Objectives:
+## Objectives
 You will be able to:
 
 * Understand and use the df.describe() and df.info() summary statistics methods
@@ -20,7 +20,7 @@ For this lab, we'll be working with a dataset containing information on various 
 In the cell below:
 
 * Import pandas and set the standard alias of `pd`
-* Load in the `lego_sets.csv`dataset using the `read_csv()` function
+* Load in the `lego_sets.csv` dataset using the `read_csv()` function
 * Display the head of the DataFrame to get a feel for what we'll be working with
 
 
@@ -198,7 +198,7 @@ df.info()
     country              12261 non-null object
     dtypes: float64(7), object(7)
     memory usage: 1.3+ MB
-    
+
 
 #### Interpreting the Results
 
@@ -385,7 +385,7 @@ print(df.play_star_rating.count())
 
     30
     10486
-    
+
 
 Now, compute the standard deviation of the `list_price` column.
 
@@ -471,7 +471,7 @@ df.review_difficulty.value_counts(normalize=True)
     Challenging         1058
     Very Challenging       8
     Name: review_difficulty, dtype: int64
-    
+
 
 
 
@@ -524,15 +524,15 @@ string_df.info()
     country              12261 non-null object
     dtypes: object(14)
     memory usage: 1.3+ MB
-    
 
-Note that everything--even the `NaN` values, have been cast to a string in the example above. 
+
+Note that everything--even the `NaN` values, has been cast to a string in the example above. 
 
 Note that for pandas Series objects (such as a single column in a DataFrame), we can do the same thing using the `apply()` method.  
 
 This is just one example of how we can quickly compute custom functions on our DataFrame--this will become especially useful when we learn how to **_normalize_** our datasets in a later section!
 
-# Conclusion
+## Summary
 
 In this lab, we learned how to:
 
