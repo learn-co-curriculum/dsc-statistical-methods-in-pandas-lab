@@ -34,17 +34,17 @@ df.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -230,17 +230,17 @@ df.describe()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -401,17 +401,20 @@ df.list_price.std()
 
 
 
-If we bought every single lego set in this dataset, how many pieces would we have?  Use the `.sum()` method on the correct column to compute this. 
+If we bought every single lego set in this dataset, how many pieces would we have?  
+
+> **Note**: If you truly want to answer this accurately, and are up for the challenge, try and remove duplicate lego-set entries before summing the pieces. That is, many of the lego sets are listed multiple times in the dataset above, depending on the country where it is being sold and other unique parameters. If you're stuck, just practice calculating the total number of pieces in the dataset for now.
 
 
 ```python
-df.piece_count.sum()
+df.drop_duplicates(subset='prod_id')['piece_count'].sum() #Total Number of Pieces Across all Unique Lego Sets
+# df.piece_count.sum() #If you're simply calculating the sum of a column
 ```
 
 
 
 
-    6049650.0
+    319071.0
 
 
 
