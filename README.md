@@ -25,6 +25,11 @@ In the cell below:
 
 
 ```python
+
+```
+
+
+```python
 df = None
 ```
 
@@ -43,6 +48,11 @@ The `.info()` method provides us metadata on the DataFrame itself.  This allows 
 
 In the cell below, call our DataFrame's `.info()` method. 
 
+
+```python
+
+```
+
 #### Interpreting the Results
 
 Read the output above, and then answer the following questions:
@@ -52,15 +62,16 @@ How many total rows are in this DataFrame?  How many columns contain numeric dat
 Write your answer below this line:
 ________________________________________________________________________________________________________________________________
 
-
-
-Answer question here...
-
 ## Using `.describe()`
 
 Whereas `.info()` provides statistics about the DataFrame itself, `.describe()` returns output containing basic summary statistics about the data contained with the DataFrame.  
 
 In the cell below, call the DataFrame's `.describe()` method. 
+
+
+```python
+
+```
 
 #### Interpreting the Results
 
@@ -70,21 +81,46 @@ How much is the standard deviation for piece count?  How many pieces are in the 
 
 ________________________________________________________________________________________________________________________________
 
-Answer questions here...
-
 ## Getting Summary Statistics
 
 Pandas also allows us to easily compute individual summary statistics using built-in methods.  Next, we'll get some practice using these methods. 
 
 In the cell below, compute the median value of the `star_rating` column.
 
+
+```python
+
+```
+
 Next, get a count of the total number of values in `play_star_rating`.
+
+
+```python
+
+```
 
 Now, compute the standard deviation of the `list_price` column.
 
-If we bought every single lego set in this dataset, how many pieces would we have?  Use the `.sum()` method on the correct column to compute this. 
+
+```python
+
+```
+
+If we bought every single lego set in this dataset, how many pieces would we have?  
+
+> **Note**: If you truly want to answer this accurately, and are up for the challenge, try and remove duplicate lego-set entries before summing the pieces. That is, many of the lego sets are listed multiple times in the dataset above, depending on the country where it is being sold and other unique parameters. If you're stuck, just practice calculating the total number of pieces in the dataset for now.
+
+
+```python
+
+```
 
 Now, let's try getting the value for the 90% quantile.  Do this in the cell below.
+
+
+```python
+
+```
 
 ## Getting Summary Statistics on Categorical Data
 
@@ -92,7 +128,17 @@ For obvious reasons, most of the methods we've used so far only work with numeri
 
 In the cell below, get the `.unique()` values contained within the `review_difficulty` column. 
 
+
+```python
+
+```
+
 Now, let's get the `value_counts` for this column, to see how common each is. 
+
+
+```python
+
+```
 
 As you can see, these provide us quick and easy ways to get information on columns containing categorical information.  
 
