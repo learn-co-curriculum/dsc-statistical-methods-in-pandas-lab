@@ -226,6 +226,25 @@ How many total rows are in this DataFrame?  How many columns contain numeric dat
 Write your answer below this line:
 ________________________________________________________________________________________________________________________________
 
+
+```python
+# __SOLUTION__ 
+
+'''
+There are 12261 rows in this dataset.
+
+There are 14 columns in the dataset.
+
+There are 7 numeric features as indicated by the 'float64' datatype.
+
+Theme name and country are the best examples of categorical data.
+
+num_review, play_star_rating, review_difficulty- star_rating, theme_name (in a few cases) 
+and _val_star_rating all clearly have null values.
+
+'''
+```
+
 ## Using `.describe()`
 
 Whereas `.info()` provides statistics about the DataFrame itself, `.describe()` returns output containing basic summary statistics about the data contained with the DataFrame.  
@@ -367,6 +386,21 @@ The output contains descriptive statistics corresponding to the columns.  Use th
 How much is the standard deviation for piece count?  How many pieces are in the largest lego set?  How many in the smallest lego set? What is the median `val_star_rating`?
 
 ________________________________________________________________________________________________________________________________
+
+
+```python
+# __SOLUTION__ 
+
+'''
+The standard deviation for piece coiunt is 825.36 (rounded to 2 places).
+
+The largest lego set has 7,541 pieces.
+
+The smallest lego set has a single piece. Can you really call that a set?
+
+The median 'val_star_rating' is 4.3. (Labelled as the 50th percentile in the summary table.)
+'''
+```
 
 ## Getting Summary Statistics
 
