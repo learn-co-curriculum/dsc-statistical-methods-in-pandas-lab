@@ -25,7 +25,7 @@ In the cell below:
 
 
 ```python
-
+# Your code here
 ```
 
 
@@ -50,7 +50,7 @@ In the cell below, call our DataFrame's `.info()` method.
 
 
 ```python
-
+# Your code here
 ```
 
 #### Interpreting the Results
@@ -70,7 +70,7 @@ In the cell below, call the DataFrame's `.describe()` method.
 
 
 ```python
-
+# Your code here
 ```
 
 #### Interpreting the Results
@@ -89,21 +89,21 @@ In the cell below, compute the median value of the `star_rating` column.
 
 
 ```python
-
+# Your code here
 ```
 
 Next, get a count of the total number of values in `play_star_rating`.
 
 
 ```python
-
+# Your code here
 ```
 
 Now, compute the standard deviation of the `list_price` column.
 
 
 ```python
-
+# Your code here
 ```
 
 If we bought every single lego set in this dataset, how many pieces would we have?  
@@ -112,14 +112,14 @@ If we bought every single lego set in this dataset, how many pieces would we hav
 
 
 ```python
-
+# Your code here
 ```
 
 Now, let's try getting the value for the 90% quantile.  Do this in the cell below.
 
 
 ```python
-
+# Your code here
 ```
 
 ## Getting Summary Statistics on Categorical Data
@@ -130,14 +130,14 @@ In the cell below, get the `.unique()` values contained within the `review_diffi
 
 
 ```python
-
+# Your code here
 ```
 
 Now, let's get the `value_counts` for this column, to see how common each is. 
 
 
 ```python
-
+# Your code here
 ```
 
 As you can see, these provide us quick and easy ways to get information on columns containing categorical information.  
