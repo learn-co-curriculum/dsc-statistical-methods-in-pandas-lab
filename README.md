@@ -212,19 +212,17 @@ ________________________________________________________________________________
 
 ```python
 
-'''
-There are 12261 rows in this dataset.
 
-There are 14 columns in the dataset.
+# There are 12261 rows in this dataset.
 
-There are 7 numeric features as indicated by the 'float64' datatype.
+# There are 14 columns in the dataset.
 
-Theme name and country are the best examples of categorical data.
+# There are 7 numeric features as indicated by the 'float64' datatype.
 
-num_review, play_star_rating, review_difficulty- star_rating, theme_name (in a few cases) 
-and _val_star_rating all clearly have null values.
+# Theme name and country are the best examples of categorical data.
 
-'''
+# num_review, play_star_rating, review_difficulty- star_rating, theme_name (in a few cases) 
+# and _val_star_rating all clearly have null values.
 ```
 
 ## Using `.describe()`
@@ -366,15 +364,15 @@ ________________________________________________________________________________
 
 ```python
 
-'''
-The standard deviation for piece coiunt is 825.36 (rounded to 2 places).
 
-The largest lego set has 7,541 pieces.
+# The standard deviation for piece coiunt is 825.36 (rounded to 2 places).
 
-The smallest lego set has a single piece. Can you really call that a set?
+# The largest lego set has 7,541 pieces.
 
-The median 'val_star_rating' is 4.3. (Labelled as the 50th percentile in the summary table.)
-'''
+# The smallest lego set has a single piece. Can you really call that a set?
+
+# The median 'val_star_rating' is 4.3. (Labelled as the 50th percentile in the summary table.)
+
 ```
 
 ## Getting Summary Statistics
@@ -418,7 +416,7 @@ df.list_price.std()
 
 
 
-    91.9804293059252
+    91.9804293059243
 
 
 
