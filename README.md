@@ -25,7 +25,12 @@ In the cell below:
 
 
 ```python
+# Your code here
+```
 
+
+```python
+df = None
 ```
 
 
@@ -165,11 +170,6 @@ df.head()
 
 
 
-
-```python
-df = None
-```
-
 ## Getting DataFrame-Level Statistics
 
 We'll begin by getting some overall summary statistics on the dataset.  There are two ways we'll get this information-- `.info()` and `.describe()`.
@@ -184,6 +184,11 @@ The `.info()` method provides us metadata on the DataFrame itself.  This allows 
 * How much memory does the DataFrame take up?
 
 In the cell below, call our DataFrame's `.info()` method. 
+
+
+```python
+# Your code here
+```
 
 
 ```python
@@ -212,11 +217,6 @@ df.info()
     memory usage: 1.3+ MB
 
 
-
-```python
-
-```
-
 #### Interpreting the Results
 
 Read the output above, and then answer the following questions:
@@ -230,19 +230,17 @@ ________________________________________________________________________________
 ```python
 # __SOLUTION__ 
 
-'''
-There are 12261 rows in this dataset.
 
-There are 14 columns in the dataset.
+# There are 12261 rows in this dataset.
 
-There are 7 numeric features as indicated by the 'float64' datatype.
+# There are 14 columns in the dataset.
 
-Theme name and country are the best examples of categorical data.
+# There are 7 numeric features as indicated by the 'float64' datatype.
 
-num_review, play_star_rating, review_difficulty- star_rating, theme_name (in a few cases) 
-and _val_star_rating all clearly have null values.
+# Theme name and country are the best examples of categorical data.
 
-'''
+# num_review, play_star_rating, review_difficulty- star_rating, theme_name (in a few cases) 
+# and _val_star_rating all clearly have null values.
 ```
 
 ## Using `.describe()`
@@ -250,6 +248,11 @@ and _val_star_rating all clearly have null values.
 Whereas `.info()` provides statistics about the DataFrame itself, `.describe()` returns output containing basic summary statistics about the data contained with the DataFrame.  
 
 In the cell below, call the DataFrame's `.describe()` method. 
+
+
+```python
+# Your code here
+```
 
 
 ```python
@@ -374,11 +377,6 @@ df.describe()
 
 
 
-
-```python
-
-```
-
 #### Interpreting the Results
 
 The output contains descriptive statistics corresponding to the columns.  Use these to answer the following questions:
@@ -391,15 +389,15 @@ ________________________________________________________________________________
 ```python
 # __SOLUTION__ 
 
-'''
-The standard deviation for piece coiunt is 825.36 (rounded to 2 places).
 
-The largest lego set has 7,541 pieces.
+# The standard deviation for piece coiunt is 825.36 (rounded to 2 places).
 
-The smallest lego set has a single piece. Can you really call that a set?
+# The largest lego set has 7,541 pieces.
 
-The median 'val_star_rating' is 4.3. (Labelled as the 50th percentile in the summary table.)
-'''
+# The smallest lego set has a single piece. Can you really call that a set?
+
+# The median 'val_star_rating' is 4.3. (Labelled as the 50th percentile in the summary table.)
+
 ```
 
 ## Getting Summary Statistics
@@ -407,6 +405,11 @@ The median 'val_star_rating' is 4.3. (Labelled as the 50th percentile in the sum
 Pandas also allows us to easily compute individual summary statistics using built-in methods.  Next, we'll get some practice using these methods. 
 
 In the cell below, compute the median value of the `star_rating` column.
+
+
+```python
+# Your code here
+```
 
 
 ```python
@@ -421,12 +424,12 @@ df.star_rating.median()
 
 
 
+Next, get a count of the total number of values in `play_star_rating`.
+
 
 ```python
-
+# Your code here
 ```
-
-Next, get a count of the total number of values in `play_star_rating`.
 
 
 ```python
@@ -440,12 +443,12 @@ print(df.play_star_rating.count())
     10486
 
 
+Now, compute the standard deviation of the `list_price` column.
+
 
 ```python
-
+# Your code here
 ```
-
-Now, compute the standard deviation of the `list_price` column.
 
 
 ```python
@@ -456,18 +459,18 @@ df.list_price.std()
 
 
 
-    91.9804293059252
+    91.9804293059243
 
 
-
-
-```python
-
-```
 
 If we bought every single lego set in this dataset, how many pieces would we have?  
 
 > **Note**: If you truly want to answer this accurately, and are up for the challenge, try and remove duplicate lego-set entries before summing the pieces. That is, many of the lego sets are listed multiple times in the dataset above, depending on the country where it is being sold and other unique parameters. If you're stuck, just practice calculating the total number of pieces in the dataset for now.
+
+
+```python
+# Your code here
+```
 
 
 ```python
@@ -483,12 +486,12 @@ df.drop_duplicates(subset='prod_id')['piece_count'].sum() #Total Number of Piece
 
 
 
+Now, let's try getting the value for the 90% quantile.  Do this in the cell below.
+
 
 ```python
-
+# Your code here
 ```
-
-Now, let's try getting the value for the 90% quantile.  Do this in the cell below.
 
 
 ```python
@@ -510,16 +513,16 @@ df.quantile(q=.9)
 
 
 
-
-```python
-
-```
-
 ## Getting Summary Statistics on Categorical Data
 
 For obvious reasons, most of the methods we've used so far only work with numerical data--there's no way to calculate the standard deviation of a column containing string values. However, there are some things that we can discover about columns containing categorical data. 
 
 In the cell below, get the `.unique()` values contained within the `review_difficulty` column. 
+
+
+```python
+# Your code here
+```
 
 
 ```python
@@ -535,12 +538,12 @@ df.review_difficulty.unique()
 
 
 
+Now, let's get the `value_counts` for this column, to see how common each is. 
+
 
 ```python
-
+# Your code here
 ```
-
-Now, let's get the `value_counts` for this column, to see how common each is. 
 
 
 ```python
@@ -571,11 +574,6 @@ df.review_difficulty.value_counts(normalize=True)
 
 
 
-
-```python
-
-```
-
 As you can see, these provide us quick and easy ways to get information on columns containing categorical information.  
 
 
@@ -589,6 +587,11 @@ In the cell below:
 
 * Call our DataFrame's `.applymap()` function and pass in `lambda x: str(x)`
 * Call our new `string_df` object's `.info()` method to confirm that everything has been cast to a string
+
+
+```python
+string_df = None
+```
 
 
 ```python
@@ -617,11 +620,6 @@ string_df.info()
     dtypes: object(14)
     memory usage: 1.3+ MB
 
-
-
-```python
-string_df = None
-```
 
 Note that everything--even the `NaN` values, has been cast to a string in the example above. 
 
