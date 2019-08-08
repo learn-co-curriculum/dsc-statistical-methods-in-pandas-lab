@@ -3,13 +3,13 @@
 
 ## Introduction
 
-In this lesson you'll get some hands-on experience using some of the key summary statistics methods in Pandas.
+In this lab you'll get some hands-on experience using some of the key summary statistics methods in Pandas.
 
 ## Objectives
 You will be able to:
 
 * Understand and use the df.describe() and df.info() summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .mean(), .median(), .std(), .var() and .quantile())
+* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .median(), and .quantile())
 * Apply a function to every element in a Series or DataFrame using s.apply() and df.applymap()
 
 
@@ -115,7 +115,7 @@ If we bought every single lego set in this dataset, how many pieces would we hav
 # Your code here
 ```
 
-Now, let's try getting the value for the 90% quantile.  Do this in the cell below.
+Now, let's try getting the value for the 90% quantile for all numerical columns.  Do this in the cell below.
 
 
 ```python
@@ -170,5 +170,5 @@ This is just one example of how we can quickly compute custom functions on our D
 In this lab, we learned how to:
 
 * Understand and use the df.describe() and df.info() summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .mean(), .median(), .std(), .var() and .quantile())
+* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .median(), and .quantile())
 * Apply a function to every element in a Series or DataFrame using s.apply() and df.applymap()
