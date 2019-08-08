@@ -3,13 +3,13 @@
 
 ## Introduction
 
-In this lesson you'll get some hands-on experience using some of the key summary statistics methods in Pandas.
+In this lab you'll get some hands-on experience using some of the key summary statistics methods in Pandas.
 
 ## Objectives
 You will be able to:
 
 * Understand and use the df.describe() and df.info() summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .mean(), .median(), .std(), .var() and .quantile())
+* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .median(), and .quantile())
 * Apply a function to every element in a Series or DataFrame using s.apply() and df.applymap()
 
 
@@ -235,12 +235,12 @@ ________________________________________________________________________________
 
 # There are 14 columns in the dataset.
 
-# There are 7 numeric features as indicated by the 'float64' datatype.
+# There are 7 columns with numeric features as indicated by the 'float64' datatype.
 
-# Theme name and country are the best examples of categorical data.
+# There are 7 columns with categorical features as indicated by the 'object' datatype.
 
-# num_review, play_star_rating, review_difficulty- star_rating, theme_name (in a few cases) 
-# and _val_star_rating all clearly have null values.
+# num_review, play_star_rating, review_difficulty, prod_desc, star_rating, theme_name (in a few cases) 
+# and val_star_rating all clearly have null values.
 ```
 
 ## Using `.describe()`
@@ -486,7 +486,7 @@ df.drop_duplicates(subset='prod_id')['piece_count'].sum() #Total Number of Piece
 
 
 
-Now, let's try getting the value for the 90% quantile.  Do this in the cell below.
+Now, let's try getting the value for the 90% quantile for all numerical columns.  Do this in the cell below.
 
 
 ```python
@@ -632,5 +632,5 @@ This is just one example of how we can quickly compute custom functions on our D
 In this lab, we learned how to:
 
 * Understand and use the df.describe() and df.info() summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .mean(), .median(), .std(), .var() and .quantile())
+* Use built-in Pandas methods for calculating summary statistics (.mean(), .std(), .count(), .sum(), .median(), and .quantile())
 * Apply a function to every element in a Series or DataFrame using s.apply() and df.applymap()
