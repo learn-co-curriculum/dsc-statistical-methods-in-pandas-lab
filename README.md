@@ -8,9 +8,9 @@ In this lab you'll get some hands-on experience using some of the key summary st
 ## Objectives
 You will be able to:
 
-* Use the `df.describe()` and `df.info()` summary statistics methods  
-* Use built-in Pandas methods for calculating summary statistics 
-* Apply a function to every element in a DataFrame 
+- Use the `df.describe()` and `df.info()` summary statistics methods  
+- Use built-in Pandas methods for calculating summary statistics 
+- Apply a function to every element in a DataFrame 
 
 
 ## Getting Started
@@ -19,9 +19,9 @@ For this lab, we'll be working with a dataset containing information on various 
 
 In the cell below:
 
-* Import pandas and set the standard alias of `pd`
-* Load in the `'lego_sets.csv'` dataset using the `read_csv()` function
-* Display the first five rows of the DataFrame to get a feel for what we'll be working with
+- Import Pandas and set the standard alias of `pd`
+- Load in the `'lego_sets.csv'` dataset using the `read_csv()` function
+- Display the first five rows of the DataFrame to get a feel for what we'll be working with
 
 
 ```python
@@ -37,7 +37,7 @@ We'll begin by getting some overall summary statistics on the dataset. There are
 
 ### Using `.info()`
 
-The `.info()` method provides us metadata on the DataFrame itself. This allows to answer questions such as:
+The `.info()` method provides us metadata on the DataFrame itself. This allows us to answer questions such as:
 
 * What data type does each column contain?
 * How many rows are in my dataset? 
@@ -159,7 +159,7 @@ string_df = None
 
 Note that everything -- even the `NaN` values, has been cast to a string in the example above. 
 
-Note that for pandas Series objects (such as a single column in a DataFrame), we can do the same thing using the `.apply()` method.  
+Note that for Pandas Series objects (such as a single column in a DataFrame), we can do the same thing using the `.apply()` method.  
 
 This is just one example of how we can quickly compute custom functions on our DataFrame -- this will become especially useful when we learn how to **_normalize_** our datasets in a later section!
 
