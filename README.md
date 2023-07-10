@@ -1,4 +1,3 @@
-
 # Statistical Methods in Pandas - Lab
 
 ## Introduction
@@ -456,7 +455,7 @@ Now, let's try getting the value for the 90% quantile for all numerical columns.
 
 ```python
 # Get the 90% quantile for all numerical columns
-df.quantile(q=.9)
+df.quantile(q=.9, numeric_only = True)
 ```
 
 
