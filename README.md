@@ -1,4 +1,3 @@
-
 # Statistical Methods in Pandas - Lab
 
 ## Introduction
