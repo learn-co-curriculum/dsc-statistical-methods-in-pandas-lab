@@ -174,7 +174,7 @@ Note that everything -- even the `NaN` values, have been cast to a string in the
 
 Note that for Pandas Series objects (such as a single column in a DataFrame), we can do the same thing using the `.apply()` method.  
 
-This is just one example of how we can quickly compute custom functions on our DataFrame -- this will become especially useful when we learn how to **_normalize_** our datasets in a later section!
+This is just one example of how we can quickly compute custom functions on our DataFrame.
 
 ## Summary
 
